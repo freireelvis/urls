@@ -1,144 +1,169 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Links em Tabela</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 50px;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <title>Links em Tabela</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 50px;
+      position: relative;
+    }
 
-        /* Texto superior direito */
-        .elvis {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: orange;
-            letter-spacing: 1px;
-            animation: float 3s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
-        }
+    /* Texto superior direito */
+    .elvis {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: orange;
+      letter-spacing: 1px;
+      animation: float 3s ease-in-out infinite alternate, glow 2s ease-in-out infinite alternate;
+    }
 
-        @keyframes float {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
-        }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
 
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px orange; }
-            50% { text-shadow: 0 0 15px orange; }
-            100% { text-shadow: 0 0 5px orange; }
-        }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
 
-        h2 {
-            animation: colorize 2s linear infinite;
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 5px orange;
+      }
 
-        @keyframes colorize {
-            0% { color: #FFD700; }
-            50% { color: #32CD32; }
-            100% { color: #FFD700; }
-        }
+      50% {
+        text-shadow: 0 0 15px orange;
+      }
 
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
+      100% {
+        text-shadow: 0 0 5px orange;
+      }
+    }
 
-        th, td {
-            padding: 15px;
-            text-align: left;
-        }
+    h2 {
+      animation: colorize 2s linear infinite;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        th {
-            background-color: #1f1f1f;
-            font-size: 1.2rem;
-        }
+    @keyframes colorize {
+      0% {
+        color: #FFD700;
+      }
 
-        tr:nth-child(even) {
-            background-color: #2a2a2a;
-        }
+      50% {
+        color: #32CD32;
+      }
 
-        tr:hover {
-            background-color: #333;
-        }
+      100% {
+        color: #FFD700;
+      }
+    }
 
-        a {
-            text-decoration: none;
-            color: #fff;
-            background: linear-gradient(90deg, #ff7f50, #ff4500);
-            padding: 8px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 800px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
 
-        a:hover {
-            background: linear-gradient(90deg, #ff4500, #ff7f50);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
 
-        a:active {
-            transform: translateY(0);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-        }
-    </style>
+    th {
+      background-color: #1f1f1f;
+      font-size: 1.2rem;
+    }
+
+    tr:nth-child(even) {
+      background-color: #2a2a2a;
+    }
+
+    tr:hover {
+      background-color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(90deg, #ff7f50, #ff4500);
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    a:hover {
+      background: linear-gradient(90deg, #ff4500, #ff7f50);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    a:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Texto no canto superior direito -->
-    <div class="elvis">Elvis Freire</div>
+  <!-- Texto no canto superior direito -->
+  <div class="elvis">Elvis Freire</div>
 
-    <h2>urls</h2>
+  <h2>urls</h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Descrição</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>apresentação dir int pub</td>
-                <td><a href="aprs_dirint_direitoshumanos.pptx" download>Baixar</a></td>
-            </tr>
-            <tr>
-                <td>apresentação dir familia</td>
-                <td><a href="aprs_dirfamilia_adoção.pptx" download>Baixar</a></td>
-            </tr>
-            <tr>
-                <td>shards</td>
-                <td><a href="https://shardbox.org/" target="_blank" rel="noopener noreferrer">Abrir</a></td>
-            </tr>
-            <tr>
-              <td>crystal</td>
-              <td><a href="https://crystal-lang.org" target="_blank" rel="noopener noreferrer">Abrir</a></td>
-            </tr>
-            <tr>
-              <td>Us - moodle</td>
-              <td><a href="https://share.google/n3x66pSeORrNEQ11V" target="_blank" rel="noopener noreferrer">Abrir</a></td>
-            </tr>
-            <tr>
-              <td>Us - portal</td>
-              <td><a href="https://portal.usantiago.cv/login/#" target="_blank" rel="noopener noreferrer">Abrir</a></td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th>Descrição</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>apresentação dir int pub</td>
+        <td><a href="aprs_dirint_direitoshumanos.pptx" download>Baixar</a></td>
+      </tr>
+      <tr>
+        <td>apresentação dir familia</td>
+        <td><a href="aprs_dirfamilia_adoção.pptx" download>Baixar</a></td>
+      </tr>
+      <tr>
+        <td>shards crystal package manager</td>
+        <td><a href="https://shardbox.org/" target="_blank" rel="noopener noreferrer">Abrir</a></td>
+      </tr>
+      <tr>
+        <td>crystal</td>
+        <td><a href="https://crystal-lang.org" target="_blank" rel="noopener noreferrer">Abrir</a></td>
+      </tr>
+      <tr>
+        <td>Us - moodle</td>
+        <td><a href="https://share.google/n3x66pSeORrNEQ11V" target="_blank" rel="noopener noreferrer">Abrir</a></td>
+      </tr>
+      <tr>
+        <td>Us - portal</td>
+        <td><a href="https://portal.usantiago.cv/login/#" target="_blank" rel="noopener noreferrer">Abrir</a></td>
+      </tr>
+    </tbody>
+  </table>
 </body>
+
 </html>
