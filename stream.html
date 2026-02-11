@@ -1,0 +1,14 @@
+<video id="video" autoplay></video>
+
+
+
+<script>
+  function stream() {
+    navigator.mediaDevices.getUserMedia({video: true}).then(stream => {
+      let video = document.querySelector("#video");
+      video.srcObject = stream; 
+    }).catch(error => {console.log(error)});
+  }
+  
+  window.addEventListener("DOMContentLoaded", stream)
+</script>
